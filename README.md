@@ -1,6 +1,7 @@
-# One Chart to Rule Them All
-
-Simplifying statistical process control with I-prime charts  
+---
+title: One Chart to Rule Them All
+subtitle: Simplifying statistical process control with I-prime charts  
+---
 
 In this webinar we introduce the I-prime (I') chart, a new statistical process control (SPC) tool that retains the intuitive simplicity and interpretability of the I chart while addressing its key limitations. Designed to accommodate both measurement and count data, the I' chart adapts gracefully to varying subgroup sizes, offering a more accurate and nuanced picture of process variation.
 
@@ -14,4 +15,11 @@ Useful materials:
 
 - Taylor (2018): Normalized Individuals Control Chart. The original article introducing I' charts.     (https://variation.com/normalized-individuals-control-chart/)  
 
-Dr Jacob Anhøj & Prof Mohammed A. Mohammed 
+Dr Jacob Anhøj & Prof Mohammed A. Mohammed
+
+## Preparations
+
+No preparation is necessary for participating in the webinar, but you may want to install and familiarise yourself with the pbcharts R package:
+```
+devtools::install_github('anhoej/pbcharts')
+```

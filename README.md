@@ -1,4 +1,4 @@
-##  One Chart to Rule Them All
+##  An Improved I Chart
 
 ### A webinar on simplifying statistical process control with I-prime charts  
 

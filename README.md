@@ -1,13 +1,22 @@
----
-title: One Chart to Rule Them All
-subtitle: Simplifying statistical process control with I-prime charts  
----
+##  One Chart to Rule Them All
+
+### A webinar on simplifying statistical process control with I-prime charts  
 
 In this webinar we introduce the I-prime (I') chart, a new statistical process control (SPC) tool that retains the intuitive simplicity and interpretability of the I chart while addressing its key limitations. Designed to accommodate both measurement and count data, the I' chart adapts gracefully to varying subgroup sizes, offering a more accurate and nuanced picture of process variation.
 
-The webinar is intended for analysts and practitioners involved in healthcare quality control and improvement. Prior experience with SPC methodology and programming in R will be beneficial.  
+### Target audience
 
-Useful materials:
+The webinar is intended for analysts and practitioners involved in healthcare quality control and improvement. Prior experience with SPC methodology and programming in R will be beneficial.
+
+### Webinar aims
+
+After the webinar, participants will:
+
+* understand the theory underlying I' charts,
+* recognise when I' charts are appropriate -- and when they are not -- as alternatives to traditional SPC charts, and
+* be able to construct I' charts using R.
+
+### Materials
 
 - Anhøj & Mohammed (2025): Mastering Statistical Process Control Charts in Healthcare. A book under development (https://anhoej.github.io/spc4hc/).   
 
@@ -15,11 +24,25 @@ Useful materials:
 
 - Taylor (2018): Normalized Individuals Control Chart. The original article introducing I' charts.     (https://variation.com/normalized-individuals-control-chart/)  
 
-Dr Jacob Anhøj & Prof Mohammed A. Mohammed
+### Preparations
 
-## Preparations
+No preparation is required to participate in the webinar. However, if you would like to refresh your understanding of basic SPC theory and practice, we recommend browsing Part 1 of our work-in-progress book:  [Mastering Statistical Process Control Charts in Healthcare](https://anhoej.github.io/spc4hc/).
 
-No preparation is necessary for participating in the webinar, but you may want to install and familiarise yourself with the pbcharts R package:
+Also, you may wish to install and familiarise yourself with the [pbcharts](https://github.com/anhoej/pbcharts) R package in advance:
+
 ```
-devtools::install_github('anhoej/pbcharts')
+devtools::install_github("anhoej/pbcharts")
 ```
+
+### About us
+
+We are: Dr Jacob Anhøj & Prof Mohammed A. Mohammed
+
+- **Jacob Anhøj**: Medical doctor with over 30 years of experience and a diploma in Information Technology. With 45+ published papers, two books, and extensive teaching expertise, he is deeply passionate about patient safety and quality improvement in healthcare. Jacob is an experienced R user and the creator of several R packages, including [qicharts2](https://github.com/anhoej/qicharts2/) and [pbcharts](https://github.com/anhoej/pbcharts), for SPC chart construction and analysis.
+<br>
+Contact: jacob@anhoej.net  
+
+- **Mohammed Amin Mohammed**: Emeritus Professor of Healthcare Quality and Effectiveness at the University of Bradford, Mohammed has over 100 peer-reviewed publications. His landmark paper [introducing SPC to healthcare](https://doi.org/10.1016/s0140-6736(00)04019-8) and his book [Statistical Process Control: Elements of Improving Quality and Safety in Healthcare](https://www.cambridge.org/core/elements/statistical-process-control/60B6025BF62017A9A203960A9E223C10) are seminal works in the field. He is also the founder of the [NHS-R Community](https://nhsrcommunity.com/), promoting the use of R in healthcare.
+<br>
+Contact: profmaminm@gmail.com; m.a.mohammed5@bradford.ac.uk  
+

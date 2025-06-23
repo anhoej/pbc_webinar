@@ -39,10 +39,6 @@ devtools::install_github("anhoej/pbcharts")
 We are: Dr Jacob Anhøj & Prof Mohammed A. Mohammed
 
 - **Jacob Anhøj**: Medical doctor with over 30 years of experience and a diploma in Information Technology. With 45+ published papers, two books, and extensive teaching expertise, he is deeply passionate about patient safety and quality improvement in healthcare. Jacob is an experienced R user and the creator of several R packages, including [qicharts2](https://github.com/anhoej/qicharts2/) and [pbcharts](https://github.com/anhoej/pbcharts), for SPC chart construction and analysis.
-<br>
-Contact: jacob@anhoej.net  
 
 - **Mohammed Amin Mohammed**: Emeritus Professor of Healthcare Quality and Effectiveness at the University of Bradford, Mohammed has over 100 peer-reviewed publications. His landmark paper [introducing SPC to healthcare](https://doi.org/10.1016/s0140-6736(00)04019-8) and his book [Statistical Process Control: Elements of Improving Quality and Safety in Healthcare](https://www.cambridge.org/core/elements/statistical-process-control/60B6025BF62017A9A203960A9E223C10) are seminal works in the field. He is also the founder of the [NHS-R Community](https://nhsrcommunity.com/), promoting the use of R in healthcare.
-<br>
-Contact: profmaminm@gmail.com; m.a.mohammed5@bradford.ac.uk  
 

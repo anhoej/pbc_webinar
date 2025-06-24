@@ -10,7 +10,7 @@ The webinar is intended for analysts and practitioners involved in healthcare qu
 
 ### Aims
 
-The webinar is scheduled to run for 60 minutes. After attending, participants will:
+The webinar is scheduled to run for 60 minutes. After attending, you will:
 
 * understand the theory behind I' charts,
 * know when – and when not – to use I' charts as alternatives to traditional SPC charts, and

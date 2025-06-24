@@ -2,7 +2,7 @@
 
 ### A webinar on simplifying statistical process control with I-prime charts  
 
-In this webinar, we introduce the I-prime (I') chart -- a new SPC tool that retains the simplicity of the I chart while addressing its limitations. It handles both measurement and count data, adapts to varying subgroup sizes, and holds the potential to replace other common SPC charts.
+In this webinar, we introduce the I-prime (I') chart – a new SPC tool that retains the simplicity of the I chart while addressing its limitations. It handles both measurement and count data, adapts to varying subgroup sizes, and holds the potential to replace other common SPC charts.
 
 ### Target audience
 
@@ -13,7 +13,7 @@ The webinar is intended for analysts and practitioners involved in healthcare qu
 The webinar is scheduled to run for 60 minutes. After attending, participants will:
 
 * understand the theory behind I' charts,
-* know when -- and when not -- to use I' charts as alternatives to traditional SPC charts, and
+* know when – and when not – to use I' charts as alternatives to traditional SPC charts, and
 * be able to construct I' charts using R.
 
 ### Preparations and materials

@@ -1,0 +1,75 @@
+table.rmdtable {
+  border-bottom: 1px solid #797979;
+}
+
+table.rmdtable td {
+  vertical-align: top;
+  font-weight: normal;
+  color: #515151;
+}
+
+table.rmdtable th {
+  color: black;
+  background: white;
+  border-bottom: 1px solid #797979;
+}
+
+table.rmdtable tr:nth-child(odd) {
+  background-color: white;
+}
+
+table.rmdtable td, table.rmdtable th {
+  font-size: 24px;
+  padding: 0.5em;
+}
+
+table.rmdtable tr > td:first-child {
+  font-weight: normal;
+}
+
+slides > slide {
+  background: linear-gradient(white, white);
+  background-color: white;
+}
+  
+.aside {
+  font-size: 65%;
+  position: absolute;
+  bottom: 1em;
+}
+
+.rfloat {
+  float: right;
+  font-size: small;
+  margin-left: 1.5em;
+  margin-top: 0.5em;
+  margin-bottom: 1em;
+}
+
+.fullwidth {
+  margin-left: -60px;
+  width: 1100px;
+}
+
+.fullwidth img {
+  width: 96%;
+  margin: auto;
+  display: block;
+}
+
+
+.lfloat {
+  float: left;
+  font-size: small;
+  margin-right: 1em;
+  margin-top: 0.5em;
+  margin-bottom: 1em;
+}
+
+.box {
+  background-color: lightblue;
+  color: black;
+}
+
+.level1 {
+}

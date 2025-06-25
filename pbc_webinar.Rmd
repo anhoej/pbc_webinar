@@ -26,7 +26,7 @@ bp <- c(169, 172, 175, 174, 161, 142,
         181, 174)
 ```
 
-## Welcome
+## Programme
 
 1. Back to basics: Statistical process control in a nutshell
 
@@ -130,10 +130,10 @@ Not to mention P' and U' charts for proportions and rates with large denominator
 <hr>
 ---------------------------------------- ---------------------------------------
 Values to plot:                          $y = \frac{n}{d}$
-Centre line:                             $CL = \frac{\sum{n}}{\sum{d}}$
+Centre line:                             $\bar{y} = \frac{\sum{n}}{\sum{d}}$
 Standard deviation of i^th^ data point:  $s_i = \sqrt{\frac{\pi}{2}}\frac{\vert{}y_i-y_{i-1}\vert{}}{\sqrt{\frac{1}{d_i}+\frac{1}{d_{i-1}}}}$
 Average standard deviation:              $\bar{s} = \frac{\sum{s}}{o}$
-Control limits:                          $\text{control limits} = CL \pm 3 \frac{\bar{s}}{\sqrt{d_i}}$
+Control limits:                          $\text{CL} = \bar{y} \pm 3 \frac{\bar{s}}{\sqrt{d_i}}$
 --------------------------------------------------------------------------------
 
 ::: aside
@@ -150,6 +150,6 @@ library(pbcharts)
 ```
 
 ```{r, echo=TRUE, fig.height=3.8, fig.width=7.6}
-pbc(bp, chart = 'i')
+pbc(bp, chart = 'i', title = 'Systolic blood pressure', ylab = 'mm Hg', xlab = 'Day')
 ```
 

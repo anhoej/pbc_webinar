@@ -59,6 +59,9 @@ pbc(rnorm(24), chart = 'i', cl = 0, sd = 1,
 --------------------------------------------------------------------------------
 Common Cause Variation                    Special Cause Variation
 ----------------------------------------  --------------------------------------
+Also referred to as random                Also referred to as non-random
+variation or noise.                       variation or signal.
+
 Is caused by a stable process and is      Is caused by an assignable cause that
 intrinsic to the process.                 it extrinsic to the process.
 
@@ -71,9 +74,6 @@ Is neither good or bad -- it just is.     Can be favourable or unfavourable and
 Can be reduced (but not eliminated) by    Unfavourable special cause can be
 changing the underlying process.          eliminated. Favourable special cause
                                           can be adapted into a new process.
-
-Also referred to as random                Also referred to as non-random
-variation or noise.                       variation or signal.
 --------------------------------------------------------------------------------
 
 ## A special cause
@@ -141,7 +141,6 @@ n = numerators, d = denominators, o = number of data values, i = i^th^ data valu
 :::
 
 ## Introducing pbcharts
-
 
 ```{r, echo=TRUE, eval=FALSE}
 devtools::install_github('anhoej/pbcharts')

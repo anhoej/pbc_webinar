@@ -19,11 +19,14 @@ ucl <- cl + 3 * s       # cl + 2.66 * amr
 plot(bp, type = 'o', ylim = range(bp, lcl, ucl))
 abline(h = c(lcl, cl, ucl))
 
-# introducing pbcharts
+# introducing pbcharts ----
+# run chart
 pbc(bp)
 
+# control chart
 pbc(bp, chart = 'i')
 
+# add titles
 pbc(bp, 
     chart = 'i',
     title = 'Systolic blood pressure', 
@@ -31,6 +34,18 @@ pbc(bp,
     xlab  = 'Day')
 
 ?pbc
+
+# On-time CT scan ----
+View(ontime_ct)
+
+# run chart of proportions
+pbc(month, ontime, cases,
+    data = ontime_ct)
+
+# I' chart of proportions
+pbc(month, ontime, cases,
+    data  = ontime_ct,
+    chart = 'i')
 
 # C-section decision to delivery times ----
 View(csection)
@@ -44,7 +59,7 @@ pbc(month, avg_delay,
     data  = csection,
     chart = 'i')
 
-# I' chart with denominator (forgetting to multiply)
+# I' chart with denominator (forgetting to multiply numerator)
 pbc(month, avg_delay, n,
     data  = csection,
     chart = 'i')
@@ -69,18 +84,6 @@ pbc(month, avg_hba1c,
 # I' chart with denominator
 pbc(month, avg_hba1c * n, n,
     data  = hba1c,
-    chart = 'i')
-
-# On-time CT scan ----
-View(ontime_ct)
-
-# run chart of proportions
-pbc(month, ontime, cases,
-    data = ontime_ct)
-
-# I' chart of proportions
-pbc(month, ontime, cases,
-    data  = ontime_ct,
     chart = 'i')
 
 # Hospital acquired Clostridioides difficile infections ----

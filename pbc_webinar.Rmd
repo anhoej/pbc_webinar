@@ -101,9 +101,6 @@ read.delim('input/limit_formulas.tsv', check.names = F) |>
 ```
 
 </div>
-::: aside
-Not to mention P' and U' charts for proportions and rates with large denominators.
-:::
 
 ## The I chart: The Swiss Army Knife of SPC
 
@@ -123,7 +120,7 @@ Not to mention P' and U' charts for proportions and rates with large denominator
 
 * *However*, does not accommodate varying subgroup sizes.
 
-*Introducing the I' chart!*
+> - *Introducing the I' chart!*
 
 ## Calculating control limits for the I' chart
 

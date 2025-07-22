@@ -33,9 +33,10 @@ pbc(bp,
     ylab  = 'mm Hg', 
     xlab  = 'Day')
 
+# help
 ?pbc
 
-# On-time CT scan ----
+# on-time CT scan ----
 View(ontime_ct)
 
 # run chart of proportions
@@ -47,27 +48,11 @@ pbc(month, ontime, cases,
     data  = ontime_ct,
     chart = 'i')
 
-# C-section decision to delivery times ----
-View(csection)
-
-# run chart of avg_delay
-pbc(month, avg_delay,
-    data = csection)
-
-# I' chart without denominator
-pbc(month, avg_delay,
-    data  = csection,
-    chart = 'i')
-
-# I' chart with denominator (forgetting to multiply numerator)
-pbc(month, avg_delay, n,
-    data  = csection,
-    chart = 'i')
-
-# with aggregated measurements, remember to multiply numerator by denominator
-pbc(month, avg_delay * n, n,
-    data  = csection,
-    chart = 'i')
+# format y axis as percentage
+pbc(month, ontime, cases,
+    data  = ontime_ct,
+    chart = 'i',
+    ypct = TRUE)
 
 # HbA1c in children with diabetes ----
 View(hba1c)
@@ -81,7 +66,12 @@ pbc(month, avg_hba1c,
     data  = hba1c,
     chart = 'i')
 
-# I' chart with denominator
+# I' chart with denominator (forgetting to multiply numerator)
+pbc(month, avg_hba1c, n,
+    data  = hba1c,
+    chart = 'i')
+
+# with aggregated measurements, remember to multiply numerator by denominator
 pbc(month, avg_hba1c * n, n,
     data  = hba1c,
     chart = 'i')
@@ -129,12 +119,12 @@ pbc(month, deaths, cases,
     facet = hospital,
     chart = 'i')
 
-# formatting y axis as percentages
+# censor y axis at zero
 pbc(month, deaths, cases,
     data  = bacteremia_mortality,
     facet = hospital,
     chart = 'i',
-    ypct  = TRUE)
+    ylim = c(0, NA))
 
 # free y axes
 pbc(month, deaths, cases,
@@ -145,9 +135,13 @@ pbc(month, deaths, cases,
     yfixed = FALSE)
 
 # Structure and summary of a pbc object ----
-p <- pbc(bp, 
-         chart = 'i',
-         plot  = FALSE)
+p <- pbc(month, deaths, cases,
+         data   = bacteremia_mortality,
+         facet  = hospital,
+         chart  = 'i',
+         ypct   = TRUE,
+         yfixed = FALSE,
+         plot   = FALSE)
 
 str(p)
 
@@ -157,6 +151,5 @@ summary(p)
 
 plot(p)
 
-# A dynamic dashboard of avoidable hospitalisations ----
+# An interactive dashboard of avoidable hospitalisations ----
 # https://anhoej.shinyapps.io/avoidable_hospitalisations/
-

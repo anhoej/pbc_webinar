@@ -1,5 +1,5 @@
 ---
-title: "An Improved I Chart"
+title: "An Improved Individuals Chart"
 subtitle: "Simplifying statistical process control with I-prime charts"
 author: "Jacob Anhøj & Mohammed A. Mohammed"
 date: "2025-08"
@@ -102,7 +102,7 @@ read.delim('input/limit_formulas.tsv', check.names = F) |>
 
 </div>
 
-## The I chart: The Swiss Army Knife of SPC
+## The individuals (I) chart: The Swiss Army Knife of SPC
 
 ::: rfloat
 ![](input/sak.jpg)
@@ -121,6 +121,18 @@ read.delim('input/limit_formulas.tsv', check.names = F) |>
 * *However*, does not accommodate varying subgroup sizes.
 
 > - *Introducing the I' chart!*
+
+## The I'-chart: Initial findings
+
+* The I'-chart produces results that exactly matches the original I-chart when applied to data with constant subgroup sizes.
+
+* The I'-chart produces wavy control limits when denominators change over time.
+
+* For count data, the I'-chart closely approximates the behaviour of Laney's prime charts (P' and U').
+
+::: aside
+Anhøj, Mohammed, Taylor (2025) [Introducing the I'-chart](https://anhoej.github.io/i_prime_chart/).
+:::
 
 ## Calculating control limits for the I' chart
 

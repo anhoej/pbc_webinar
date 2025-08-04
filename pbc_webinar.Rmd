@@ -44,6 +44,10 @@ After attending, you will:
 
 * be able to construct I' charts using R.
 
+::: aside
+https://github.com/anhoej/pbc_webinar
+:::
+
 ## The standard control chart
 
 ```{r}

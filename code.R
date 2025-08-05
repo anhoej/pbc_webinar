@@ -52,7 +52,7 @@ pbc(month, ontime, cases,
 pbc(month, ontime, cases,
     data  = ontime_ct,
     chart = 'i',
-    ypct = TRUE)
+    ypct  = TRUE)
 
 # HbA1c in children with diabetes ----
 View(hba1c)
@@ -124,7 +124,7 @@ pbc(month, deaths, cases,
     data  = bacteremia_mortality,
     facet = hospital,
     chart = 'i',
-    ylim = c(0, NA))
+    ylim  = c(0, NA))
 
 # free y axes
 pbc(month, deaths, cases,
@@ -135,6 +135,7 @@ pbc(month, deaths, cases,
     yfixed = FALSE)
 
 # Structure and summary of a pbc object ----
+dev.off()
 p <- pbc(month, deaths, cases,
          data   = bacteremia_mortality,
          facet  = hospital,

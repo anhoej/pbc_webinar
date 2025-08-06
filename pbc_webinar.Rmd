@@ -40,7 +40,7 @@ After attending, you will:
 
 * understand the theory behind I' charts,
 
-* know when – and when not – to use I' charts as alternatives to traditional SPC charts, and
+* know when to use I' charts as alternatives to traditional SPC charts, and
 
 * be able to construct I' charts using R.
 
@@ -150,7 +150,7 @@ Control limits:                          $\text{CL} = \bar{y} \pm 3 \frac{\bar{s
 --------------------------------------------------------------------------------
 
 ::: aside
-n = numerators, d = denominators, o = number of data values, i = i^th^ data value
+n = numerators, d = denominators, o = number of subgroups, i = i^th^ data value
 :::
 
 ## Introducing pbcharts

@@ -49,13 +49,13 @@ View(hba1c)
 # I' chart with denominator (forgetting to multiply numerator)
 
 
-# with aggregated measurements, remember to multiply numerator by denominator
+# with aggregated measurements, multiply numerator by denominator
 
 
 # Hospital acquired Clostridioides difficile infections ----
 View(cdi)
 
-# run chart of counts
+# I' chart of counts
 
 
 # I' chart with freeze after month 24

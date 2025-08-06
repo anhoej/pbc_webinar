@@ -79,9 +79,10 @@ pbc(month, avg_hba1c * n, n,
 # Hospital acquired Clostridioides difficile infections ----
 View(cdi)
 
-# run chart of counts
+# I' chart of counts
 pbc(month, n,
-    data = cdi)
+    data = cdi,
+    chart = 'i')
 
 # I' chart with freeze after month 24
 pbc(month, n,

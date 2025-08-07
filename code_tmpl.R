@@ -76,7 +76,7 @@ View(bacteremia_mortality)
 # I' chart faceted by hospital
 
 
-# censor y axis at zero
+# format y axis as percentage
 
 
 # free y axes

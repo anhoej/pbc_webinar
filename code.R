@@ -9,10 +9,10 @@ bp <- c(169, 172, 175, 174, 161, 142,
         157, 183, 177, 171, 185, 176,
         181, 174)
 
-# build-a-plot with base R
-cl  <- mean(bp)
+# Build-a-plot with base R ----
 amr <- mean(abs(diff(bp)))
 s   <- amr / 1.128
+cl  <- mean(bp)
 lcl <- cl - 3 * s
 ucl <- cl + 3 * s
 
@@ -36,7 +36,7 @@ pbc(bp,
 # help
 ?pbc
 
-# On-time CT scan ----
+# I' charts with proportion data (on-time CT scan) ----
 View(ontime_ct)
 
 # I' chart of proportions
@@ -50,15 +50,15 @@ pbc(month, ontime, cases,
     chart = 'i',
     ypct  = TRUE)
 
-# HbA1c in children with diabetes ----
+# I' charts with measurement data (HbA1c in children with diabetes) ----
 View(hba1c)
 
-# I' chart without denominator
+# measurements without denominator
 pbc(month, avg_hba1c,
     data  = hba1c,
     chart = 'i')
 
-# I' chart with denominator (forgetting to multiply numerator)
+# measurements with denominator (forgetting to multiply numerator)
 pbc(month, avg_hba1c, n,
     data  = hba1c,
     chart = 'i')
@@ -68,7 +68,31 @@ pbc(month, avg_hba1c * n, n,
     data  = hba1c,
     chart = 'i')
 
-# Hospital acquired Clostridioides difficile infections ----
+# Small multiples (bacteremia 30-day mortality) ----
+View(bacteremia_mortality)
+
+# I' chart faceted by hospital
+pbc(month, deaths, cases,
+    data  = bacteremia_mortality,
+    chart = 'i',
+    facet = hospital)
+
+# format y axis as percentage
+pbc(month, deaths, cases,
+    data  = bacteremia_mortality,
+    chart = 'i',
+    facet = hospital,
+    ypct  = TRUE)
+
+# free y axes
+pbc(month, deaths, cases,
+    data   = bacteremia_mortality,
+    chart  = 'i',
+    facet  = hospital,
+    ypct   = TRUE,
+    yfixed = FALSE)
+
+# Case study: Hospital acquired Clostridioides difficile infections ----
 View(cdi)
 
 # I' chart of counts
@@ -102,30 +126,6 @@ pbc(month, n, days,
     split    = 24,
     exclude  = 20,
     multiply = 10000)
-
-# Bacteremia 30-day mortality ----
-View(bacteremia_mortality)
-
-# I' chart faceted by hospital
-pbc(month, deaths, cases,
-    data  = bacteremia_mortality,
-    chart = 'i',
-    facet = hospital)
-
-# format y axis as percentage
-pbc(month, deaths, cases,
-    data  = bacteremia_mortality,
-    chart = 'i',
-    facet = hospital,
-    ypct  = TRUE)
-
-# free y axes
-pbc(month, deaths, cases,
-    data   = bacteremia_mortality,
-    chart  = 'i',
-    facet  = hospital,
-    ypct   = TRUE,
-    yfixed = FALSE)
 
 # Structure and summary of a pbc object ----
 dev.off()

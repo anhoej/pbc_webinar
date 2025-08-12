@@ -10,13 +10,15 @@ bp <- c(169, 172, 175, 174, 161, 142,
         181, 174)
 
 # Build-a-plot with base R ----
-amr <- mean(abs(diff(bp)))
-s   <- amr / 1.128
-cl  <- mean(bp)
-lcl <- cl - 3 * s
-ucl <- cl + 3 * s
+amr <- mean(abs(diff(bp)))  # average moving range
+s   <- amr / 1.128          # standard deviation
+cl  <- mean(bp)             # centre line
+lcl <- cl - 3 * s           # lower control limit
+ucl <- cl + 3 * s           # upper control limit
 
-plot(bp, type = 'o', ylim = range(bp, lcl, ucl))
+plot(bp, 
+     type = 'o',
+     ylim = range(bp, lcl, ucl))
 abline(h = c(lcl, cl, ucl))
 
 # Introducing pbcharts ----
@@ -58,12 +60,13 @@ pbc(month, avg_hba1c,
     data  = hba1c,
     chart = 'i')
 
-# measurements with denominator (forgetting to multiply numerator)
+# measurements with denominator
+# WRONG! - forgetting to multiply numerator
 pbc(month, avg_hba1c, n,
     data  = hba1c,
     chart = 'i')
 
-# with aggregated measurements, multiply numerator by denominator
+# CORRECT! - with aggregated measurements, multiply numerator by denominator
 pbc(month, avg_hba1c * n, n,
     data  = hba1c,
     chart = 'i')
@@ -73,22 +76,22 @@ View(bacteremia_mortality)
 
 # I' chart faceted by hospital
 pbc(month, deaths, cases,
+    facet = hospital,
     data  = bacteremia_mortality,
-    chart = 'i',
-    facet = hospital)
+    chart = 'i')
 
 # format y axis as percentage
 pbc(month, deaths, cases,
+    facet = hospital,
     data  = bacteremia_mortality,
     chart = 'i',
-    facet = hospital,
     ypct  = TRUE)
 
 # free y axes
 pbc(month, deaths, cases,
+    facet  = hospital,
     data   = bacteremia_mortality,
     chart  = 'i',
-    facet  = hospital,
     ypct   = TRUE,
     yfixed = FALSE)
 
@@ -130,11 +133,10 @@ pbc(month, n, days,
 # Structure and summary of a pbc object ----
 dev.off()
 p <- pbc(month, deaths, cases,
+         facet  = hospital,
          data   = bacteremia_mortality,
          chart  = 'i',
-         facet  = hospital,
          ypct   = TRUE,
-         yfixed = FALSE,
          plot   = FALSE)
 
 str(p)

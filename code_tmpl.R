@@ -9,10 +9,19 @@ bp <- c(169, 172, 175, 174, 161, 142,
         157, 183, 177, 171, 185, 176,
         181, 174)
 
-# build-a-plot with base R
+# Build-a-plot with base R ----
+amr <- mean(abs(diff(bp)))  # average moving range
+s   <- amr / 1.128          # standard deviation
+cl  <- mean(bp)             # centre line
+lcl <- cl - 3 * s           # lower control limit
+ucl <- cl + 3 * s           # upper control limit
 
+plot(bp, 
+     type = 'o',
+     ylim = range(bp, lcl, ucl))
+abline(h = c(lcl, cl, ucl))
 
-# introducing pbcharts ----
+# Introducing pbcharts ----
 # run chart
 
 
@@ -25,11 +34,8 @@ bp <- c(169, 172, 175, 174, 161, 142,
 # help
 
 
-# on-time CT scan ----
+# I' charts with proportion data (on-time CT scan) ----
 View(ontime_ct)
-
-# run chart of proportions
-
 
 # I' chart of proportions
 
@@ -37,22 +43,32 @@ View(ontime_ct)
 # format y axis as percentage
 
 
-# HbA1c in children with diabetes ----
+# I' charts with measurement data (HbA1c in children with diabetes) ----
 View(hba1c)
 
-# run chart
+# measurements without denominator
 
 
-# I' chart without denominator
+# measurements with denominator
+# WRONG! - forgetting to multiply numerator
 
 
-# I' chart with denominator (forgetting to multiply numerator)
+# CORRECT! - with aggregated measurements, multiply numerator by denominator
 
 
-# with aggregated measurements, multiply numerator by denominator
+# Small multiples (bacteremia 30-day mortality) ----
+View(bacteremia_mortality)
+
+# I' chart faceted by hospital
 
 
-# Hospital acquired Clostridioides difficile infections ----
+# format y axis as percentage
+
+
+# free y axes
+
+
+# Case study: Hospital acquired Clostridioides difficile infections ----
 View(cdi)
 
 # I' chart of counts
@@ -70,20 +86,20 @@ View(cdi)
 # plot rates per 10000 days
 
 
-# Bacteremia 30-day mortality ----
-View(bacteremia_mortality)
-
-# I' chart faceted by hospital
-
-
-# format y axis as percentage
-
-
-# free y axes
-
-
 # Structure and summary of a pbc object ----
+dev.off()
+p <- pbc(month, deaths, cases,
+         facet  = hospital,
+         data   = bacteremia_mortality,
+         chart  = 'i',
+         ypct   = TRUE,
+         plot   = FALSE)
 
+str(p)
+p$title
+p$data
+summary(p)
+plot(p)
 
 # An interactive dashboard of avoidable hospitalisations ----
 # https://anhoej.shinyapps.io/avoidable_hospitalisations/
